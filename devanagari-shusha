@@ -1,0 +1,82 @@
+// Name:		Phonetic Devanagari Layout based on Shusha
+// Author:	Deep Pradhan <wiz_kid_o3@yahoo.com>
+// Version:	1.0 (18 Feb 2018)
+
+// To use:
+//	1.	Append in file /usr/share/X11/xkb/symbols/in
+//	2.	Add entry to /usr/share/X11/xkb/rules/evdev.xml:
+//        <variant>
+//          <configItem>
+//            <name>devanagari-shusha</name>
+//
+//            <shortDescription>hi</shortDescription>
+//            <description>Devanagari (Shusha)</description>
+//            <languageList>
+//              <iso639Id>hin</iso639Id>
+//            </languageList>
+//          </configItem>
+//        </variant>
+//	3.	Run: sudo dpkg-reconfigure xkb-data
+
+partial alphanumeric_keys
+xkb_symbols "devanagari-shusha" {
+	name[Group1]="Devanagari (Shusha)";
+	key.type="FOUR_LEVEL";
+
+	// Roman digits
+	key <TLDE> { [ grave,  U0906, U0951 ] };
+	key <AE01> { [ 1,      U0950, U0967 ] };
+	key <AE02> { [ 2,      U090D, U0968 ] };
+	key <AE03> { [ 3,      U090E, U0969 ] };
+	key <AE04> { [ 4,      U0946, U096A, U20B9 ] };
+	key <AE05> { [ 5,      U0901, U096B ] };
+	key <AE06> { [ 6,      U0945, U096C ] };
+	key <AE07> { [ 7,      U0949, U096D ] };
+	key <AE08> { [ 8,      U094A, U096E ] };
+	key <AE09> { [ 9,  parenleft, U096F ] };
+	key <AE10> { [ 0, parenright, U0966 ] };
+	key <AE11> { [ minus,  U0911, U0952 ] };
+	key <AE12> { [ U0913,  U0912, U0953 ] };
+
+	// Q row
+	key <AD01> { [ U0925, U0927, U0961 ] };
+	key <AD02> { [ U0947, U0948, U090C ] };
+	key <AD03> { [ U090F, U0910, U0960 ] };
+	key <AD04> { [ U0930, U0943, U0931 ] };
+	key <AD05> { [ U0924, U091F ] };
+	key <AD06> { [ U092F, U0937, U095F ] };
+	key <AD07> { [ U0941, U0942 ] };
+	key <AD08> { [ U093F, U0940 ] };
+	key <AD09> { [ U094B, U094C, U0963 ] };
+	key <AD10> { [ U092A, U0962 ] };
+	key <AD11> { [ U0907, U0908, U0944 ] };
+	key <AD12> { [ U0909, U090A ] };
+	key <BKSL> { [ U0914, U0919, U0954 ] };
+
+	// A row
+	key <AC01> { [ U093E,       U0905, U0904 ] };
+	key <AC02> { [ U0938,       U0936, U095C ] };
+	key <AC03> { [ U0926,       U0921 ] };
+	key <AC04> { [ U092B,       U093C, U095E ] };
+	key <AC05> { [ U0917,       U0918, U095A] };
+	key <AC06> { [ U0939,       U091E ] };
+	key <AC07> { [ U091C,       U091D, U095B ] };
+	key <AC08> { [ U0915,       U0916, U0958 ] };
+	key <AC09> { [ U0932,       U0933, U0934 ] };
+	key <AC10> { [ semicolon,   colon ] };
+	key <AC11> { [ apostrophe,  quotedbl ] };
+
+	// Z row
+	key <AB01> { [ U0920,  U0922,   U095D ] };
+	key <AB02> { [ U094D ] };
+	key <AB03> { [ U091A,  U091B ] };
+	key <AB04> { [ U0935,  U093D ] };
+	key <AB05> { [ U092C,  U092D ] };
+	key <AB06> { [ U0928,  U0923,   U0929 ] };
+	key <AB07> { [ U092E,  U0902,   U0959 ] };
+	key <AB08> { [ comma,  U0903,   U0970 ] };
+	key <AB09> { [ period, U0964,   U0965 ] };
+	key <AB10> { [ u090b,  question, U097D ] };
+
+	include "level3(ralt_switch)"
+};
