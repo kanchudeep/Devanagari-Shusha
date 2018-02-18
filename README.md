@@ -6,7 +6,7 @@ Phonetic Devanagari Layout based on Shusha for Linux
 1.	Append in file /usr/share/X11/xkb/symbols/in
 2.	Add entry to /usr/share/X11/xkb/rules/evdev.xml:
 ```
-<variant>
+        <variant>
           <configItem>
             <name>devanagari-shusha</name>
 
