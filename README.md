@@ -19,3 +19,6 @@ Phonetic Devanagari Layout based on Shusha for Linux
         </variant>
 ```
 3.	Run: sudo dpkg-reconfigure xkb-data
+
+## Keyboard Layout:
+![Keyboard Layout](https://raw.githubusercontent.com/kanchudeep/devanagari-shusha/master/devanagari-shusha-layout.png)
