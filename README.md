@@ -1,4 +1,4 @@
-# Devanagari Layout based on Shusha
+# Devanagari Keyboard Layout based on Shusha
 Phonetic Devanagari Layout based on Shusha for Linux
 
 ## To use:
