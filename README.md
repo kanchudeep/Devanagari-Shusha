@@ -1,7 +1,7 @@
-# devanagrai-shusha
+# Devanagari Layout based on Shusha
 Phonetic Devanagari Layout based on Shusha for Linux
 
-To use:
+## To use:
 
 1.	Append in file /usr/share/X11/xkb/symbols/in
 2.	Add entry to /usr/share/X11/xkb/rules/evdev.xml:
